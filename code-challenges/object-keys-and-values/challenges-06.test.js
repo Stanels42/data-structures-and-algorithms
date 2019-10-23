@@ -96,7 +96,7 @@ const hasChildrenValues = (arr, character) => {
 
   let hasChildren = false;
 
-  arr.forEach(person => {
+  Object.values(arr).forEach(person => {
 
     if (Object.values(person).includes(character) && Object.values(person)[2].length > 0){
       hasChildren = true;
@@ -106,7 +106,6 @@ const hasChildrenValues = (arr, character) => {
 
   return hasChildren;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -117,8 +116,8 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   let hasChildren = false;
-  arr.forEach(person => {
-    if (Object.entries(person)[0].includes(character) && Object.entries(person)[2][1].length > 0) {
+  Object.entries(arr).forEach(person => {
+    if (person[1].name === character && Object.entries(person[1])[2][1].length > 0) {
       hasChildren = true;
     }
   });
@@ -135,7 +134,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 const totalCharacters = (arr) => {
   let total = arr.length;
 
-  arr.forEach(person => {
+  Object.values(arr).forEach(person => {
 
     if (person.spouse !== null) {
       total++;

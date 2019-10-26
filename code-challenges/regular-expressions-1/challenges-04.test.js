@@ -28,6 +28,7 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   const findCapilized = /[A-Z][a-z]*/g;
   let found = str.match(findCapilized);
+
   if (found) {
     return found;
   } else {
@@ -66,11 +67,7 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   const test = /^[oO](ct(ober)?)$/;
-  if (test.test(input)) {
-    return true;
-  } else {
-    return false;
-  }
+  return test.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------

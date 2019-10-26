@@ -12,7 +12,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
 
-  let newArr = [];
+  const newArr = [];
 
   for (let value of arr) {
     newArr.push(Math.pow(2, value));
@@ -29,7 +29,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
 
-  let newArr = [];
+  const newArr = [];
   arr.forEach(value => newArr.push(Math.pow(2 , value)));
 
   return newArr;
@@ -181,12 +181,10 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
 
-  const newArr = arr.map(ability => {
+  return arr.map(ability => {
 
     return {name: ability.stat.name, total: ability.baseStat + ability.effort, };
   });
-
-  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------

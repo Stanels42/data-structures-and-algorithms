@@ -9,7 +9,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  return arr.map(str => str.replace(/^\w/, str.slice(0,1).toUpperCase()));
+  return arr.map(str => str.replace(str.charAt(0), str.charAt(0).toUpperCase()));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ const isSecure = (url) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
-Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
+Write a function named detectTicTacToeWin that accepts a two-dimensionl array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
 
 This function should return either true or false to indicate if someone won the game.
 
